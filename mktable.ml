@@ -44,5 +44,5 @@ let print_row () =
   print_newline ();
   dotimes (print_cell) (height - 2);
 in
-dotimes print_row rows;
+dotimes print_row (rows - 1) ;
 print_h_border ()
