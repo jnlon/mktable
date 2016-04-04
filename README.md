@@ -20,23 +20,21 @@ Enter cell height: 4
 Enter rows: 2
 Enter columns: 3
 Enter horizontal bar char: *
-Enter vertical bar char: .
+Enter vertical bar char: |
 ```
 
 Output: 
 
 ```
-****************************
-.        .        .        .
-.        .        .        .
-.        .        .        .
-.        .        .        .
-****************************
-.        .        .        .
-.        .        .        .
-.        .        .        .
-.        .        .        .
-****************************
+|********|********|********|
+|        |        |        |
+|        |        |        |
+|        |        |        |
+|********|********|********|
+|        |        |        |
+|        |        |        |
+|        |        |        |
+|********|********|********|
 ```
 
 #### Running with arguments
@@ -55,7 +53,7 @@ Output:
 The following example uses commandline arguments to print the same table as above:
 
 ```
-$ ./mktable 8 4 2 3 '\*' '.'
+$ ./mktable 8 4 2 3 '\*' '|'
 ```
 
 # Why is this useful?
@@ -64,7 +62,7 @@ I use it to create faux datatables and spreadsheets when working with text files
 For example, typing the following from ex mode in Vim will insert the above table into your document:
 
 ```
-:r!mktable 8 4 2 3 '\*' '.'
+:r!mktable 8 4 2 3 '\*' '|'
 ```
 
 It could also be used to generate test input for other programs.
