@@ -27,7 +27,12 @@ let v_bar = (get_arg 6).[0]
 in
 let print_h_border () =
   let _print_hbar () = print_char h_bar in
-  dotimes _print_hbar ((width * columns) + columns);
+  let _print_cell_hbar () = 
+    dotimes _print_hbar (width-1);
+    print_char v_bar
+  in
+  print_char v_bar;
+  dotimes _print_cell_hbar (columns-1);
 in
 let print_cell () =
   let print_cell_to_column () =
